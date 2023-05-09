@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+header{
+  background: #CB2C2A;
+}
+.DescubNavbar{
+  font-family: 'Jockey One', sans-serif;
+  font-size: 42px;
+}
+.DescubIcon{
+  font-size: 90px;
+}
+.DescubProfile{
+  background: #EBEBEB;
+}
+.socialnetwork-list{
+  list-style: none;
+}
+.socialnetwork-info{
+  margin: 20px 0px 20px 0px;
+  font-family: 'Open Sans';
+
+}
+.profile-seudonimo,.badge-title,.activity-title{
+  font-size: 48px;
+}
+h2,.ProfileStatistics,.badge-title,.activity-title,.activity-card-tittle{
+  font-family: 'Rubik';
+}
+.badge-title,.activity-title{
+  color: #2CA6A4;
+}
+.statistics-text{
+  font-size: 48px;
+  line-height : 1;
+}
+.statistics-d{
+  font-size: 96px;
+}
+.ProfileInfo{
+  background: #F5F5F5;
+}
+.DescubActivity{
+  background: #FFFFFF;
+}
+.activity-card-link{
+  text-decoration: none;
+}
