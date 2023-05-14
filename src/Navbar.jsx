@@ -30,7 +30,7 @@ function DescubNavbar() {
                     <Nav.Link href="#estadisticas">Estadísticas</Nav.Link>
                   </Nav>
                   <Nav>
-                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                    <NavDropdown title="Mi Usuario" id="collasible-nav-dropdown">
                       <NavDropdown.Item href="#action/3.1">
                         Usuario
                       </NavDropdown.Item>

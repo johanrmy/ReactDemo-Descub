@@ -2,9 +2,9 @@ import { useState } from 'react'
 import ProfileSection from "./Profile"
 import DescubNavbar from "./Navbar"
 import ActivitySection from "./Activity"
+import DescubFooter from "./footer"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,6 +15,9 @@ function App() {
         <ProfileSection />
         <ActivitySection/>
       </main>
+      <footer>
+        <DescubFooter/>
+      </footer>
     </>
   );
 }

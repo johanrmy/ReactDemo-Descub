@@ -52,7 +52,7 @@ function ActivityGroup(){
 
 function ActivitySection(){
     return (
-      <section className="DescubActivity">
+      <section className="DescubActivity mb-4">
         <Container>
           <Row>
             <ActivityTitle />

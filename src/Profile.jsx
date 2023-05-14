@@ -18,13 +18,11 @@ function ProfileInfo(props){
     return(
         <Card className="ProfileInfo mx-auto" border="light" style={{ width: '18rem'}}>
         <Card.Body>
-          <Card.Text>
             <ul className="socialnetwork-list">
-                <li className="socialnetwork-info socialnetwork-email">{props.email}</li>
-                <li className="socialnetwork-info socialnetwork-ig">{props.instagram}</li>
-                <li className="socialnetwork-info socialnetwork-fb">{props.facebook}</li>
+                <li className="socialnetwork-info socialnetwork-email"><a href="#">{props.email}</a></li>
+                <li className="socialnetwork-info socialnetwork-ig"><a href="">{props.instagram}</a></li>
+                <li className="socialnetwork-info socialnetwork-fb"><a href="">{props.facebook}</a></li>
             </ul>
-          </Card.Text>
         </Card.Body>
       </Card>
     )
