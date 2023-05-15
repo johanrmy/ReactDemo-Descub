@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import ProfileSection from "./Profile"
-import DescubNavbar from "./Navbar"
-import ActivitySection from "./Activity"
-import DescubFooter from "./footer"
+import ProfileSection from "./components/Profile"
+import DescubNavbar from "./components/Navbar"
+import ActivitySection from "./components/Activity"
+import DescubFooter from "./components/Footer"
 
 function App() {
 
