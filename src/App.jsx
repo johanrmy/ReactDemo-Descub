@@ -1,24 +1,38 @@
-import { useState } from 'react'
-import ProfileSection from "./components/Profile"
-import DescubNavbar from "./components/Navbar"
-import ActivitySection from "./components/Activity"
-import DescubFooter from "./components/Footer"
+import Home from './routes/Home.jsx';
+import Murales from './routes/Murales.jsx';
+import Mapeo from './routes/Mapeo.jsx';
+import Estadisticas from './routes/Estadisticas.jsx';
+import Muralista from './routes/Muralista.jsx';
+import { createBrowserRouter, RouterProvider} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>
+  },
+  {
+    path: "/tusmurales",
+    element: <Murales/>
+  },
+  {
+    path: "/mapear",
+    element: <Mapeo/>
+  },
+  {
+    path: "estadisticas",
+    element: <Estadisticas/>
+  },
+  {
+    path: "/muralista",
+    element: <Muralista/>
+  }
+])
+
 
 function App() {
 
   return (
-    <>
-      <header>
-        <DescubNavbar />
-      </header>
-      <main>
-        <ProfileSection />
-        <ActivitySection/>
-      </main>
-      <footer>
-        <DescubFooter/>
-      </footer>
-    </>
+    <RouterProvider router={router}></RouterProvider>
   );
 }
 
