@@ -7,7 +7,7 @@ import Card from 'react-bootstrap/Card';
 
 function ProfilePicture(props){
     return(
-        <div className="mt-4">
+        <div className="mt-2">
                 <Image className="mx-auto d-block square border border-4 border-dark" src="https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" alt="profile_img" roundedCircle width={281} height={281}/>
                 <h2 className="text-center profile-seudonimo">{props.seudonimo}</h2>
         </div>
@@ -39,7 +39,7 @@ function ProfileStatistics(props){
 
 function ProfileBadges(){
     return(
-        <Card className="ProfileInfo mx-auto mt-4" border="light" style={{ width: '18rem'}}>
+        <Card className="ProfileInfo mx-auto mt-2" border="light" style={{ width: '18rem'}}>
         <Card.Header className="text-center badge-title">Insignias</Card.Header>
         <Card.Body>
           <Card.Text>
