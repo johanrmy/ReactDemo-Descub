@@ -12,6 +12,19 @@ header,footer{
 .DescubIcon{
   font-size: 90px;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DescubIcon:link,.DescubIcon:visited,.DescubIcon:active,.DescubIcon:hover{
+  text-decoration:none;
+}
+.DescubLinks{
+  text-decoration:none;
+  color: #FFFFFF;
+}
+.DescubLinks:hover{
+  color: #B8B8B8;
 }
 .DescubProfile{
   background: #EBEBEB;
