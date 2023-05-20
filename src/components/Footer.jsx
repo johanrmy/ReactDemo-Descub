@@ -1,31 +1,35 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import logo from '../assets/descub_logo.svg'
+import { Link} from "react-router-dom";
 function DescubFooter(){
     return (
-      <>
+      <footer>
         <Container>
           <Row>
-            <div className='col-lg-4 col-md-6 mb-4 mb-md-0 DescubIcon'>
-              Descub
+            <div className="col-lg-4 col-md-6 mb-4 mb-md-0 DescubIcon">
+            <Link to={"/"} className="DescubIcon">
+                  <img src={logo} alt="descub_logo" className='DescubImg' width={250}/>
+                </Link>
             </div>
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0 linksfooter">
               <h5 className="text-uppercase linksheadfooter">Navegar</h5>
 
               <ul className="list-unstyled mb-0">
                 <li className="linkfooter">
-                  <a href="#!" className="text-dark">
-                    Tus murales
-                  </a>
+                  <Link to={"/tusmurales"} className="DescubLinksFooter text-dark">
+                    Tus Murales
+                  </Link>
                 </li>
                 <li className="linkfooter">
-                  <a href="#!" className="text-dark">
+                  <Link to={"/mapear"} className="DescubLinksFooter text-dark">
                     Mapear
-                  </a>
+                  </Link>
                 </li>
                 <li className="linkfooter">
-                  <a href="#!" className="text-dark">
+                  <Link to={"/estadisticas"} className="DescubLinksFooter text-dark">
                     Estadísticas
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -52,15 +56,11 @@ function DescubFooter(){
             </div>
           </Row>
         </Container>
-        <div
-          className="text-center p-3 DescubCopy"
-        >
+        <div className="text-center p-3 DescubCopy">
           © 2023 Copyright:
-          <a className="text-dark" href="#">
-            Descub.com
-          </a>
+          <Link to={"/"} className='text-dark'>Descub.com</Link>
         </div>
-      </>
+      </footer>
     );
 }
 export default DescubFooter

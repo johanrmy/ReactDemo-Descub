@@ -1,36 +1,53 @@
+import Mapeo from '../routes/Mapeo'
+import Murales from '../routes/Murales'
+import Estadisticas from '../routes/Estadisticas'
+import Muralista from '../routes/Muralista';
+import Home from '../routes/Home';
 import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import {Link} from "react-router-dom";
+import logo from '../assets/descub_logo.svg'
+
 function DescubNavbar() {
   return (
-    <>
+    <header>
       <Container>
         <Row className="px-0">
           <Navbar
             collapseOnSelect
             expand="lg"
             variant="dark"
-            className="p-3 DescubNavbar"
+            className="p-4 DescubNavbar"
           >
             <Container>
               <Col>
-                <Navbar.Brand href="#home" className="DescubIcon">
-                  Descub
-                </Navbar.Brand>
+                <Link to={"/"} className="DescubIcon">
+                  <img src={logo} alt="descub_logo" className='DescubImg' width={300}/>
+                </Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               </Col>
               <Col sm={9}>
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="#tusmurales">Tus Murales</Nav.Link>
-                    <Nav.Link href="#mapear">Mapear</Nav.Link>
-                    <Nav.Link href="#estadisticas">Estadísticas</Nav.Link>
+                    <Link to={"/tusmurales"} className="DescubLinks mx-4">
+                      Tus Murales
+                    </Link>
+                    <Link to={"/mapear"} className="DescubLinks mx-4">
+                      Mapear
+                    </Link>
+                    <Link to={"/estadisticas"} className="DescubLinks mx-4">
+                      Estadisticas
+                    </Link>
                   </Nav>
                   <Nav>
-                    <NavDropdown title="Mi Usuario" id="collasible-nav-dropdown">
+                    <NavDropdown
+                      title="Mi Usuario"
+                      id="collasible-nav-dropdown"
+                    >
                       <NavDropdown.Item href="#action/3.1">
                         Usuario
                       </NavDropdown.Item>
@@ -49,7 +66,7 @@ function DescubNavbar() {
           </Navbar>
         </Row>
       </Container>
-    </>
+    </header>
   );
 }
 
