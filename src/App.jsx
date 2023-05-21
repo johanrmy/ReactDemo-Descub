@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     element: <Estadisticas/>
   },
   {
-    path: "/muralista",
+    path: "/muralista/:id",
     element: <Muralista/>
   }
 ])
