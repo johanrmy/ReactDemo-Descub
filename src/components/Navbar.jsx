@@ -26,13 +26,13 @@ function DescubNavbar() {
             <Container>
               <Col>
                 <Link to={"/"} className="DescubIcon">
-                  <img src={logo} alt="descub_logo" className='DescubImg' width={300}/>
+                  <img src={logo} alt="descub_logo" className='DescubImg' width={320} height={80}/>
                 </Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               </Col>
               <Col sm={9}>
                 <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="me-auto">
+                  <Nav className='mx-auto'>
                     <Link to={"/tusmurales"} className="DescubLinks mx-4">
                       Tus Murales
                     </Link>
@@ -43,10 +43,11 @@ function DescubNavbar() {
                       Estadisticas
                     </Link>
                   </Nav>
-                  <Nav>
+                  <Nav className='mx-auto'>
                     <NavDropdown
                       title="Mi Usuario"
                       id="collasible-nav-dropdown"
+                      className='DescubLinks'
                     >
                       <NavDropdown.Item href="#action/3.1">
                         Usuario
