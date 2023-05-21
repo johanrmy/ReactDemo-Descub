@@ -1,31 +1,66 @@
-import { render } from "react-dom"
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card';
+import React,{useEffect,useState} from "react";
+import {MdEmail} from 'react-icons/md'
+import {AiFillInstagram} from 'react-icons/ai'
+import {BsFacebook} from 'react-icons/bs'
+import { IconContext } from "react-icons";
 
 function ProfilePicture(props){
     return(
         <div className="mt-2">
-                <Image className="mx-auto d-block square border border-4 border-dark" src="https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80" alt="profile_img" roundedCircle width={281} height={281}/>
+                <Image className="mx-auto d-block square border border-4 border-dark" src={props.foto_perfil} alt="profile_img" roundedCircle width={281} height={281}/>
                 <h2 className="text-center profile-seudonimo">{props.seudonimo}</h2>
         </div>
     )
 }
 
 function ProfileInfo(props){
-    return(
-        <Card className="ProfileInfo mx-auto" border="light" style={{ width: '18rem'}}>
+    return (
+      <Card
+        className="ProfileInfo mx-auto"
+        border="light"
+        style={{ width: "18rem" }}
+      >
         <Card.Body>
-            <ul className="socialnetwork-list">
-                <li className="socialnetwork-info socialnetwork-email"><a href="#">{props.email}</a></li>
-                <li className="socialnetwork-info socialnetwork-ig"><a href="">{props.instagram}</a></li>
-                <li className="socialnetwork-info socialnetwork-fb"><a href="">{props.facebook}</a></li>
-            </ul>
+          <ul className="socialnetwork-list">
+            <li className="socialnetwork-info socialnetwork-info-email">
+              <a href={`mailto:${props.email}`}>
+                <IconContext.Provider
+                  value={{ className: "icon-scnw icon-scnw-email" }}
+                >
+                  <MdEmail />
+                </IconContext.Provider>
+                {props.email}
+              </a>
+            </li>
+            <li className="socialnetwork-info socialnetwork-info-ig">
+              <a href={`https://www.instagram.com/${props.instagram}`} target="_blank">
+                <IconContext.Provider
+                  value={{ className: "icon-scnw icon-scnw-ig" }}
+                >
+                  <AiFillInstagram />
+                </IconContext.Provider>
+                {props.instagram}
+              </a>
+            </li>
+            <li className="socialnetwork-info socialnetwork-info-fb">
+              <a href={`https://www.facebook.com/${props.facebook}`} target="_blank">
+                <IconContext.Provider
+                  value={{ className: "icon-scnw icon-scnw-fb" }}
+                >
+                  <BsFacebook />
+                  {props.facebook}
+                </IconContext.Provider>
+              </a>
+            </li>
+          </ul>
         </Card.Body>
       </Card>
-    )
+    );
 }
 
 function ProfileStatistics(props){
@@ -52,17 +87,18 @@ function ProfileBadges(){
     )
 }
 
-function ProfileSection(){
+
+function ProfileSection(props){
     return (
       <section className="DescubProfile">
         <Container>
           <Row>
             <Col sm={4} className="mb-4">
-              <ProfilePicture seudonimo="Gabokaso" />
+              <ProfilePicture seudonimo={props.seudonimo} foto_perfil={props.foto}/>
               <ProfileInfo
-                email="gabope@gmail.com"
-                instagram="gabokaso"
-                facebook="GABO KASO"
+                email={props.email}
+                instagram={props.user_instagram}
+                facebook={props.user_facebook}
               />
             </Col>
             <Col sm={5} className="d-flex align-items-center">
