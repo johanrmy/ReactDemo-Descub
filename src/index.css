@@ -22,6 +22,7 @@ header,footer{
 .DescubLinks{
   text-decoration:none;
   color: #FFFFFF;
+  font-size: 40px;
 }
 .DescubLinks:hover{
   color: #B8B8B8;
@@ -71,3 +72,21 @@ h2,.ProfileStatistics,.badge-title,.activity-title,.activity-card-tittle{
 .DescubCopy{
   background: #98211F;
 }
+.icon-scnw{
+  font-size: 1.8em;
+  position: relative;
+  margin-right: 0.4em;
+}
+.socialnetwork-info>a{
+  color: black;
+}
+.socialnetwork-info-email>a:hover{
+  color: #ea4335;
+}
+.socialnetwork-info-ig>a:hover{
+  color: #d6249f;
+}
+.socialnetwork-info-fb>a:hover,.icon-scnw-fb:hover{
+  color: #1877f2;
+}
+
