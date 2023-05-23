@@ -106,4 +106,28 @@ h2,.ProfileStatistics,.activity-card-tittle{
 .socialnetwork-info-fb>a:hover,.icon-scnw-fb:hover{
   color: #1877f2;
 }
+.bodylogin{
+  background-color: #EBEBEB;
+  height: 1024px;
+  width: 1440px;
+}
+.con{
+  background-color: #EBEBEB;
+  height: 1024px;
+  width: 1440px;
+}
+.bg{
+  background-color: #CB2C2A;
+  height: 1024px;
+  width: 720px;
+}
+
+.log{
+  height: 1024px;
+  width: 720px;
+}
+
+img{
+  background-position: center center ;
+}
 
