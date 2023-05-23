@@ -2,19 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+html {
+  font-size: 100%;
+}
+
 header,footer{
   background: #CB2C2A;
 }
-.DescubNavbar,.DescubIcon{
+.DescubNavbar,.DescubIcon,.badge-title,.activity-title{
   font-family: 'Jockey One', sans-serif;
-  font-size: 42px;
 }
 .DescubIcon{
-  font-size: 90px;
-  color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.DescubImg{
+  width:15rem;
+  height:4rem;
 }
 .DescubIcon:link,.DescubIcon:visited,.DescubIcon:active,.DescubIcon:hover{
   text-decoration:none;
@@ -22,7 +27,7 @@ header,footer{
 .DescubLinks{
   text-decoration:none;
   color: #FFFFFF;
-  font-size: 40px;
+  font-size: 2em;
 }
 .DescubLinks:hover{
   color: #B8B8B8;
@@ -37,24 +42,36 @@ header,footer{
   margin: 20px 0px 20px 0px;
   font-family: 'Open Sans';
 }
+.linksfooter{
+  font-family: 'Jockey One';
+}
 .socialnetwork-info>a:link,.socialnetwork-info>a:visited,.socialnetwork-info>a:active,
 .linkfooter>a:link,.linkfooter>a:visited,.linkfooter>a:active{
   text-decoration:none;
 }
 .linksheadfooter{
   font-weight: bold;
-}
-.profile-seudonimo,.badge-title,.activity-title{
-  font-size: 48px;
-}
-h2,.ProfileStatistics,.badge-title,.activity-title,.activity-card-tittle{
-  font-family: 'Rubik';
+  font-family: 'Jockey One';
 }
 .badge-title,.activity-title{
-  color: #2CA6A4;
+  font-size: 2.4em;
+  color: #297373;
+}
+.card-header{
+  background-color: none;
+}
+.activity-title{
+  color: #297373;
+}
+.profile-seudonimo{
+  font-size: 2.7em;
+  font-weight: bold;
+}
+h2,.ProfileStatistics,.activity-card-tittle{
+  font-family: 'Rubik';
 }
 .statistics-text{
-  font-size: 48px;
+  font-size:  3em;
   line-height : 1;
 }
 .statistics-d{
@@ -89,4 +106,3 @@ h2,.ProfileStatistics,.badge-title,.activity-title,.activity-card-tittle{
 .socialnetwork-info-fb>a:hover,.icon-scnw-fb:hover{
   color: #1877f2;
 }
-
