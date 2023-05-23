@@ -18,7 +18,7 @@ function Muralista(){
         <DescubNavbar />
         {muralista != null ? (
           <ProfileSection
-            seudonimo={muralista.data.sedonimo}
+            seudonimo={muralista.data.seudonimo}
             user_instagram={muralista.data.userInstagram}
             user_facebook={muralista.data.userFacebook}
             email={muralista.data.email}
