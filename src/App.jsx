@@ -1,4 +1,5 @@
 import Home from './routes/Home.jsx';
+import Auth from './routes/Auth.jsx';
 import Murales from './routes/Murales.jsx';
 import Mapeo from './routes/Mapeo.jsx';
 import Estadisticas from './routes/Estadisticas.jsx';
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path:"/login",
     element: <Login/>
   },
+  {
+    path: "/auth",
+    element: <Auth/>
+  }
 ])
 
 
