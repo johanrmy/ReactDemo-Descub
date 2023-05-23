@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import logo from '../assets/descub_logo.svg'
 import { Link} from "react-router-dom";
+
 function DescubFooter(){
     return (
       <footer>

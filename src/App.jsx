@@ -4,8 +4,10 @@ import Mapeo from './routes/Mapeo.jsx';
 import Estadisticas from './routes/Estadisticas.jsx';
 import Muralista from './routes/Muralista.jsx';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import Login from './routes/Login.jsx';
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: <Home/>
@@ -25,7 +27,11 @@ const router = createBrowserRouter([
   {
     path: "/muralista/:id",
     element: <Muralista/>
-  }
+  },
+  {
+    path:"/login",
+    element: <Login/>
+  },
 ])
 
 
