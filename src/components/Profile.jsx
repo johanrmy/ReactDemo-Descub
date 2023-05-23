@@ -10,12 +10,19 @@ import {BsFacebook} from 'react-icons/bs'
 import { IconContext } from "react-icons";
 
 function ProfilePicture(props){
-    return(
-        <div className="mt-2">
-                <Image className="mx-auto d-block square border border-4 border-dark" src={props.foto_perfil} alt="profile_img" roundedCircle width={281} height={281}/>
-                <h2 className="text-center profile-seudonimo">{props.seudonimo}</h2>
-        </div>
-    )
+    return (
+      <div className="mt-2">
+        <Image
+          className="mx-auto d-block square border border-3 border-dark"
+          src={`data:image/png;base64,${props.foto_perfil}`}
+          alt="profile_img"
+          roundedCircle
+          width={281}
+          height={281}
+        />
+        <h2 className="text-center profile-seudonimo mt-2">{props.seudonimo}</h2>
+      </div>
+    );
 }
 
 function ProfileInfo(props){
@@ -66,7 +73,7 @@ function ProfileInfo(props){
 function ProfileStatistics(props){
     return(
         <div className="ProfileStatistics d-flex flex-column mb-4">
-            <div className="statistics-text text-center mb-4"><span className="statistics-d">{props.murales}</span> murales registrados</div>
+            <div className="statistics-text text-center mb-4 mx-3"><span className="statistics-d ">{props.murales}</span> murales registrados</div>
             <div className="statistics-text text-center mb-4"><span className="statistics-d">{props.escaneos}</span> escaneos</div>
         </div>
     )
@@ -74,7 +81,7 @@ function ProfileStatistics(props){
 
 function ProfileBadges(){
     return(
-        <Card className="ProfileInfo mx-auto mt-2" border="light" style={{ width: '18rem'}}>
+        <Card className="ProfileInfo mx-auto my-2" border="light" style={{ width: '18rem'}}>
         <Card.Header className="text-center badge-title">Insignias</Card.Header>
         <Card.Body>
           <Card.Text>
@@ -93,7 +100,7 @@ function ProfileSection(props){
       <section className="DescubProfile">
         <Container>
           <Row>
-            <Col sm={4} className="mb-4">
+            <Col sm={12} md={6} xs={12} lg={4} className="mb-4">
               <ProfilePicture seudonimo={props.seudonimo} foto_perfil={props.foto}/>
               <ProfileInfo
                 email={props.email}
@@ -101,10 +108,10 @@ function ProfileSection(props){
                 facebook={props.user_facebook}
               />
             </Col>
-            <Col sm={5} className="d-flex align-items-center">
-              <ProfileStatistics murales={17} escaneos={225} />
+            <Col sm={12} md={6} xs={12} lg={5}className="d-flex align-items-center">
+              <ProfileStatistics murales={0} escaneos={0} />
             </Col>
-            <Col sm={3}>
+            <Col sm={12} md={12} xs={12} lg={3}>
               <ProfileBadges />
             </Col>
           </Row>

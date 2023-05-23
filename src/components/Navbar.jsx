@@ -21,25 +21,25 @@ function DescubNavbar() {
             collapseOnSelect
             expand="lg"
             variant="dark"
-            className="p-4 DescubNavbar"
+            className="py-3 DescubNavbar"
           >
             <Container>
-              <Col>
-                <Link to={"/"} className="DescubIcon">
-                  <img src={logo} alt="descub_logo" className='DescubImg' width={320} height={80}/>
+              <Col sm={4} className='d-flex justify-content-center'>
+                <Link to={"/"} className="DescubIcon d-inline-block">
+                  <img src={logo} alt="descub_logo" className='DescubImg'/>
                 </Link>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               </Col>
-              <Col sm={9}>
+              <Col sm={8}>
                 <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className='mx-auto'>
-                    <Link to={"/tusmurales"} className="DescubLinks mx-4">
+                  <Nav>
+                    <Link to={"/tusmurales"} className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center">
                       Tus Murales
                     </Link>
-                    <Link to={"/mapear"} className="DescubLinks mx-4">
+                    <Link to={"/mapear"} className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center">
                       Mapear
                     </Link>
-                    <Link to={"/estadisticas"} className="DescubLinks mx-4">
+                    <Link to={"/estadisticas"} className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center">
                       Estadisticas
                     </Link>
                   </Nav>
@@ -53,11 +53,11 @@ function DescubNavbar() {
                         Usuario
                       </NavDropdown.Item>
                       <NavDropdown.Item href="#action/3.2">
-                        Vistas
+                        Configuraciones
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="#action/3.3">
-                        Configuraciones
+                        Cerrar Sesión
                       </NavDropdown.Item>
                     </NavDropdown>
                   </Nav>
