@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <Murales/>
   },
   {
-    path: "/mapear",
+    path: "/mapear", //agregar {id_usuario} a la ruta cuando usemos conexión de la API
     element: <Mapeo/>
   },
   {
