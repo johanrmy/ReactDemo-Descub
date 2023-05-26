@@ -5,7 +5,9 @@
 html {
   font-size: 100%;
 }
-
+body{
+  margin:0;
+}
 header,footer{
   background: #CB2C2A;
 }
@@ -121,13 +123,33 @@ h2,.ProfileStatistics,.activity-card-tittle{
   height: 1024px;
   width: 720px;
 }
-
 .log{
   height: 1024px;
   width: 720px;
 }
-
 img{
   background-position: center center ;
 }
-
+.map-leaflet{
+  height: 100%;
+}
+.DescubMap{
+  position: relative;
+  height: 88.57vh;
+}
+.div-infoMap{
+  position: absolute;
+  width: auto;
+  z-index:  1000;
+}
+.infoMap{
+  border: #FFFFFF 1px solid;
+  background: rgba(203, 44, 42, 0.8);
+}
+.card-infoMap{
+  background-color: transparent;
+  border: transparent;
+}
+.cardheader-infomap{
+  background: rgba(255, 255, 255, 0.7)
+}
