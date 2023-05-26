@@ -1,13 +1,12 @@
-import DescubNavbar from "../components/Navbar";
-import DescubFooter from "../components/Footer";
-
+import DescubNavbar from "../components/Navbar"
+import DescubFooter from "../components/Footer"
+import Map from "../components/Mapping"
 function Mapeo(){
     return (
-      <body>
-        <DescubNavbar/>
-        <h1>MAPEO</h1>
-        <DescubFooter/>
-      </body>
+      <>
+        <DescubNavbar />
+        <Map/>
+      </>
     );
 }
 export default Mapeo;
