@@ -3,11 +3,11 @@ import DescubFooter from "../components/Footer";
 
 function Home(){
     return (
-      <body>
-        <DescubNavbar/>
+      <>
+        <DescubNavbar />
         <h1>HOME</h1>
-        <DescubFooter/>
-      </body>
+        <DescubFooter />
+      </>
     );
 }
 export default Home
