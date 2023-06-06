@@ -4,9 +4,14 @@
 
 html {
   font-size: 100%;
-}
-body{
+  height: 100%;
   margin:0;
+  padding: 0;
+}
+body,#root{
+  margin:0;
+  padding: 0;
+  height: 100%;
 }
 header,footer{
   background: #CB2C2A;
@@ -108,28 +113,6 @@ h2,.ProfileStatistics,.activity-card-tittle{
 .socialnetwork-info-fb>a:hover,.icon-scnw-fb:hover{
   color: #1877f2;
 }
-.bodylogin{
-  background-color: #EBEBEB;
-  height: 1024px;
-  width: 1440px;
-}
-.con{
-  background-color: #EBEBEB;
-  height: 1024px;
-  width: 1440px;
-}
-.bg{
-  background-color: #CB2C2A;
-  height: 1024px;
-  width: 720px;
-}
-.log{
-  height: 1024px;
-  width: 720px;
-}
-img{
-  background-position: center center ;
-}
 .map-leaflet{
   height: 100%;
 }
@@ -142,14 +125,78 @@ img{
   width: auto;
   z-index:  1000;
 }
+.infoMap-head{
+  border: #FFFFFF 1px solid;
+  background: rgba(255, 255, 255, 0.7);
+}
+.infoMap-head:focus:active,.infoMap-head:hover{
+  border: #FFFFFF 1px solid;
+  background: rgba(255, 255, 255, 1);
+}
 .infoMap{
   border: #FFFFFF 1px solid;
   background: rgba(203, 44, 42, 0.8);
+}
+.infoMap:focus:active,.infoMap:hover{
+  background: rgba(203, 44, 42, 1);
+  border: #FFFFFF 1px solid;
 }
 .card-infoMap{
   background-color: transparent;
   border: transparent;
 }
-.cardheader-infomap{
-  background: rgba(255, 255, 255, 0.7)
+.descublogin,.descubregister{
+  background: #F5F5F5;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+.DescubImgLogin,.DescubImgRegister{
+  width: 10rem;;
+  height: 3.5rem;
+}
+.descub-form-login,.descub-form-register{
+  width: 50%;
+}
+.descub-label-form{
+  font-family: 'Rubik';
+  font-size: 1.1em;
+}
+.descub-input-form{
+  background: rgba(111, 111, 111, .2);
+  border-radius: 20px;
+  font-family: 'Rubik';
+}
+.descub-input-form:focus{
+  box-shadow: none;
+  border-color: #98211F;
+}
+.descub-submit-form{
+  background: #CB2C2A;
+  border-radius: 25px;
+  border-color: transparent;
+  font-family: 'Rubik';
+}
+.descub-submit-form:hover,.descub-submit-form:focus:active{
+  box-shadow: none;
+  background: #98211F;
+  border-color: transparent;
+}
+.text-login,.text-register{
+  font-size: 2.5em;
+  font-family: 'Rubik';
+}
+.PaintImgLogin,.PaintImgRegister{
+  width: 80%;
+  height: 100%;
+  filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+  animation: moveImage 2.5s infinite alternate;
+}
+@keyframes moveImage {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
 }
