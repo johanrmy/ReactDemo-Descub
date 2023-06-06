@@ -6,6 +6,7 @@ import Estadisticas from './routes/Estadisticas.jsx';
 import Muralista from './routes/Muralista.jsx';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from './routes/Login.jsx';
+import Register from './routes/Register.jsx';
 
 const router = createBrowserRouter([
 
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     element: <Murales/>
   },
   {
-    path: "/mapear", //agregar {id_usuario} a la ruta cuando usemos conexión de la API
+    path: "/mapear/:id_usuario", 
     element: <Mapeo/>
   },
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path:"/login",
     element: <Login/>
+  },
+  {
+    path:"/register",
+    element: <Register/>
   },
   {
     path: "/auth",
