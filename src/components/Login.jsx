@@ -1,45 +1,92 @@
-import logo from '../assets/descub_logo.svg'
+import { Container,Row,Col,Form,Button} from "react-bootstrap";
+import logo from '../assets/descub_logo_red.svg'
+import React, { useEffect } from 'react'
+import tsetse from '../assets/tsetese.svg'
+import heartPaint from '../assets/heart-paint.svg'
+import { Link } from "react-router-dom";
 
 function DescubLogin(){
     return (
-        <body className='body-login'>
-
-            <div className='container con w-75 mt-5 rounded shadow'>
-            
-                <div className='row'>
-                    <div className='col log rounded'>
-                        <h2 className='fw-bold text-center py-5'>User Login</h2>
-                        <form action="#">
-                            <div className='mb-4'>
-                                <label htmlFor="email" form='form-label'>E-mail</label>
-                                <input type="email" className='form-control' name='email'/>
-                            </div>
-
-                            <div className='mb-4'>
-                                <label htmlFor="password" form='form-label'>Contraseña</label>
-                                <input type="password" className='form-control' name='password'/>
-                            </div>
-
-                            <div className='mb-4 form-check'>
-                                <input type="checkbox" name='connected' className='form-check-input'/>
-                                <label htmlFor="connected" className='form-check-label'>Mantener sesión inciada</label>
-                            </div>
-
-                            <div className="d-grid">
-                                <button type='submit' className='btm btn-primary'>Iniciar Sesion</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div className='col bg rounded'>
-                        <img src={logo} alt="descub_logo" className='ImgLogin' />
-                    </div>
-
-                </div>
+      <section className="descublogin">
+        <Container>
+          <Row>
+            <div className="col-12 d-flex justify-content-between align-items-center py-2">
+              <Link to={"/login"} className="DescubIcon d-inline-block">
+                <img
+                  src={logo}
+                  alt="descub_logo"
+                  className="DescubImgLogin mt-4"
+                />
+              </Link>
+              <Link to={"/register"} className="DescubIcon d-inline-block">
+                <Button
+                  variant="primary"
+                  type="submit"
+                  className="descub-submit-form"
+                >
+                  Regístrate
+                </Button>
+              </Link>
             </div>
-            
-        </body>
-
+          </Row>
+          <Row className="mt-5 vertical-center">
+            <Col
+              lg={6}
+              md={12}
+              sm={12}
+              xs={12}
+              className="d-flex align-items-center justify-content-center"
+            >
+              <Form className="descub-form-login" method="post">
+                <div className="text-center my-3 text-login">Inicia Sesión</div>
+                <Form.Group>
+                  <label htmlFor="email" className="descub-label-form mb-1">
+                    Correo Electrónico
+                  </label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Ingresa email"
+                    className="descub-input-form mb-4"
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <label htmlFor="password" className="descub-label-form  mb-1">
+                    Contraseña
+                  </label>
+                  <Form.Control
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Ingresa contraseña"
+                    autoComplete="on"
+                    className="descub-input-form mb-4"
+                  />
+                </Form.Group>
+                <div className="d-grid gap-2">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="descub-submit-form"
+                  >
+                    Iniciar Sesión
+                  </Button>
+                </div>
+              </Form>
+            </Col>
+            <Col
+              lg={6}
+              md={12}
+              sm={12}
+              xs={12}
+              className="d-flex align-items-center justify-content-center"
+            >
+              <img src={tsetse} alt="Image" className="PaintImgLogin" />
+            </Col>
+          </Row>
+        </Container>
+      </section>
     );
 }
 export default DescubLogin
