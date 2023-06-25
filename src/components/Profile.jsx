@@ -82,7 +82,7 @@ function ProfileStatistics(props){
 function ProfileBadges(){
     return(
         <Card className="ProfileInfo mx-auto my-2" border="light" style={{ width: '18rem'}}>
-        <Card.Header className="text-center badge-title">Insignias</Card.Header>
+        <Card.Header className="text-center badge-title badge-header">Insignias</Card.Header>
         <Card.Body>
           <Card.Text>
             <img className="mx-auto d-block" src="#" alt="badgex" width={96} height={96}/>
