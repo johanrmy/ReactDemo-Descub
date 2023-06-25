@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import logo from '../assets/descub_logo.svg'
+import logo from '../assets/descub_logo_red.svg'
 import { Link} from "react-router-dom";
 
 function DescubFooter(){
@@ -19,17 +19,17 @@ function DescubFooter(){
 
               <ul className="list-unstyled mb-0">
                 <li className="linkfooter">
-                  <Link to={"/tusmurales"} className="DescubLinksFooter text-white">
+                  <Link to={"/tusmurales"} className="DescubLinksFooter text-footer">
                     Tus Murales
                   </Link>
                 </li>
                 <li className="linkfooter">
-                  <Link to={"/mapear"} className="DescubLinksFooter text-white">
+                  <Link to={"/mapear"} className="DescubLinksFooter text-footer">
                     Mapear
                   </Link>
                 </li>
                 <li className="linkfooter">
-                  <Link to={"/estadisticas"} className="DescubLinksFooter text-white">
+                  <Link to={"/estadisticas"} className="DescubLinksFooter text-footer">
                     Estadísticas
                   </Link>
                 </li>
@@ -40,17 +40,17 @@ function DescubFooter(){
 
               <ul className="list-unstyled mb-0">
                 <li className="linkfooter">
-                  <a href="#!" className="text-white">
+                  <a href="#!" className="text-footer">
                     Usuario
                   </a>
                 </li>
                 <li className="linkfooter">
-                  <a href="#!" className="text-white">
+                  <a href="#!" className="text-footer">
                     Vistas
                   </a>
                 </li>
                 <li className="linkfooter">
-                  <a href="#!" className="text-white">
+                  <a href="#!" className="text-footer">
                     Configuración
                   </a>
                 </li>
