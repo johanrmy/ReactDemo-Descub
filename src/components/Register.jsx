@@ -11,7 +11,7 @@ function DescubRegister(){
         <Container>
           <Row>
             <div className="col-12 d-flex justify-content-between align-items-center py-2">
-              <Link to={"/login"} className="DescubIcon d-inline-block">
+              <Link to={"/"} className="DescubIcon d-inline-block">
                 <img
                   src={logo}
                   alt="descub_logo"
