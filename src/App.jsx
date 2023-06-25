@@ -7,42 +7,43 @@ import Muralista from './routes/Muralista.jsx';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from './routes/Login.jsx';
 import Register from './routes/Register.jsx';
+import { ProtectedRoute } from './components/ProtectedRoute.jsx';
 
+const user = null
 const router = createBrowserRouter([
-
   {
     path: "/",
-    element: <Home/>
+    element: <Home isAllowed={!!user}/>,
   },
   {
     path: "/tusmurales",
-    element: <Murales/>
+    element: <ProtectedRoute isAllowed={!!user}><Murales/></ProtectedRoute>,
   },
   {
-    path: "/mapear/:id_usuario", 
-    element: <Mapeo/>
+    path: "/mapear/:id_usuario",
+    element: <ProtectedRoute isAllowed={!!user}><Mapeo /></ProtectedRoute>,
   },
   {
     path: "estadisticas",
-    element: <Estadisticas/>
+    element: <ProtectedRoute isAllowed={!!user}><Estadisticas /></ProtectedRoute>,
   },
   {
     path: "/muralista/:id",
-    element: <Muralista/>
+    element: <ProtectedRoute isAllowed={!!user}><Muralista /></ProtectedRoute>,
   },
   {
-    path:"/login",
-    element: <Login/>
+    path: "/login",
+    element: <Login />,
   },
   {
-    path:"/register",
-    element: <Register/>
+    path: "/register",
+    element: <Register />,
   },
   {
     path: "/auth",
-    element: <Auth/>
-  }
-])
+    element: <Auth />,
+  },
+]);
 
 
 function App() {
