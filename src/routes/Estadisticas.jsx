@@ -1,11 +1,11 @@
 import DescubNavbar from "../components/Navbar";
 import DescubFooter from "../components/Footer";
-
+import EstadisticaSection from "../components/Estadisticas";
 function Estadisticas(){
     return (
       <>
         <DescubNavbar/>
-        <h1>ESTADISTICAS</h1>
+        <EstadisticaSection/>
         <DescubFooter/>
       </>
     );
