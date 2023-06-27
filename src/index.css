@@ -22,6 +22,9 @@ header{
 .DescubNavbar,.DescubIcon,.badge-title,.activity-title{
   font-family: 'Jockey One', sans-serif;
 }
+.DescubNavbar{
+  font-family: 'Rubik';
+}
 .DescubIcon{
   display: flex;
   justify-content: center;
@@ -42,13 +45,14 @@ header{
 .DescubLinks{
   text-decoration:none;
   color: #2F2F2F;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 .DescubLinks:hover{
   color: #8F8F8F;
 }
 .text-footer{
   color: #2F2F2F;
+  font-family: 'Rubik';
 }
 .text-footer:hover{
   color: #8F8F8F;
@@ -272,4 +276,31 @@ h2,.ProfileStatistics,.activity-card-tittle{
 .text-home-2{
   font-size: 1em;
   font-family: 'Open Sans','Calibri';
+}
+.estadisticas_picture{
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)),#CB2C2A;
+}
+.title-div-estadistica{
+  font-family: 'Rubik','Open Sans';
+  font-size: 3.4em;
+  color: #F5F5F5;
+  font-weight: bold;
+}
+.subtitle-div-estadistica{
+  font-family: 'Open Sans';
+  font-size: 1.7em;
+  color: #F5F5F5;
+}
+.estadisticas_info{
+  background: #FFFFFF;
+}
+.graph{
+  width: 70%;
+  height: 300px;
+}
+.title-estadisticas{
+  font-family: 'Rubik';
+  font-size: 1.7em;
+  color: #1C7C54;
+  font-weight: 800;
 }
