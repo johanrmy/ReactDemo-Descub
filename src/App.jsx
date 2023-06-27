@@ -2,6 +2,7 @@ import Home from './routes/Home.jsx';
 import Auth from './routes/Auth.jsx';
 import Murales from './routes/Murales.jsx';
 import Mapeo from './routes/Mapeo.jsx';
+import Mural from './routes/Mural.jsx';
 import Estadisticas from './routes/Estadisticas.jsx';
 import Muralista from './routes/Muralista.jsx';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/muralista/:id",
     element: <Muralista/>
+  },
+  {
+    path: "/mural",
+    element: <Mural/>
   },
   {
     path:"/login",

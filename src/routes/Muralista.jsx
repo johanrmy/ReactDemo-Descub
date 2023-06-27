@@ -1,3 +1,4 @@
+
 import ProfileSection from "../components/Profile"
 import ActivitySection from "../components/Activity"
 import DescubNavbar from "../components/Navbar";
