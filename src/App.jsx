@@ -8,15 +8,16 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from './routes/Login.jsx';
 import Register from './routes/Register.jsx';
 import { ProtectedRoute } from './components/ProtectedRoute.jsx';
+import DescubNavbar from './components/Navbar.jsx';
 
-const user = null
+const user = {id:1,nombre:"johan"}
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home isAllowed={!!user}/>,
   },
   {
-    path: "/tusmurales",
+    path: "/tusmurales/:id_usuario",
     element: <ProtectedRoute isAllowed={!!user}><Murales/></ProtectedRoute>,
   },
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     element: <ProtectedRoute isAllowed={!!user}><Mapeo /></ProtectedRoute>,
   },
   {
-    path: "estadisticas",
+    path: "/estadisticas",
     element: <ProtectedRoute isAllowed={!!user}><Estadisticas /></ProtectedRoute>,
   },
   {
@@ -49,7 +50,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <RouterProvider router={router}></RouterProvider>
+    <>
+    <RouterProvider router={router} ></RouterProvider>
+    </>
   );
 }
 

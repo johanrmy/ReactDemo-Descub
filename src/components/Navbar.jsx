@@ -34,13 +34,13 @@ function DescubNavbar(props) {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav>
                     <Link
-                      to={"/tusmurales"}
+                      to={"/tusmurales/1"}
                       className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center"
                     >
                       Tus Murales
                     </Link>
                     <Link
-                      to={"/mapear/:id"}
+                      to={"/mapear/1"}
                       className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center"
                     >
                       Mapear
@@ -67,9 +67,6 @@ function DescubNavbar(props) {
                       >
                         <NavDropdown.Item href="#action/3.1">
                           Usuario
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                          Configuraciones
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.3">
