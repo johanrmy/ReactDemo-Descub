@@ -109,51 +109,33 @@ h2,.ProfileStatistics,.activity-card-tittle{
 .socialnetwork-info-fb>a:hover,.icon-scnw-fb:hover{
   color: #1877f2;
 }
-.bodylogin{
-  background-color: #EBEBEB;
-  height: 1024px;
-  width: 1440px;
-}
-.con{
-  background-color: #EBEBEB;
-  height: 1024px;
-  width: 1440px;
-}
+
 .bg{
   background-color: #CB2C2A;
-  height: 1024px;
-  width: 720px;
+  height: 102px;
+  width: 500px;
 }
 
-.log{
-  height: 1024px;
-  width: 720px;
-}
-
-img{
-  background-position: center center ;
-}
 .color-palette {
   display: flex;
   flex-wrap: wrap;
 }
 
 .color {
-  width: 100px;
-  height: 350px;
+  width: 90px;
+  height: 300px;
   cursor: pointer;
 }
-.color-picker {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -300px;
-}
+
 .titulo {
   font-family: 'NombreDeLaFuente', sans-serif;
-  color: #ff0000; /* Color rojo */
   font-size: 24px;
   font-weight: bold;
   text-align: center;
  
+}
+.carousel {
+  max-width: 900px; /* Ajusta el ancho según tus necesidades */
+  height: 100%; /* Ajusta la altura según tus necesidades */
+
 }
