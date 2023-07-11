@@ -14,7 +14,7 @@ function ProfilePicture(props){
       <div className="mt-2">
         <Image
           className="mx-auto d-block square border border-3 border-dark"
-          src={`data:image/png;base64,${props.foto_perfil}`}
+          src={props.foto_perfil}
           alt="profile_img"
           roundedCircle
           width={281}
@@ -109,7 +109,7 @@ function ProfileSection(props){
               />
             </Col>
             <Col sm={12} md={6} xs={12} lg={5}className="d-flex align-items-center">
-              <ProfileStatistics murales={0} escaneos={0} />
+              <ProfileStatistics murales={props.infoMural.length} escaneos={props.infoScaneos.scans} />
             </Col>
             <Col sm={12} md={12} xs={12} lg={3}>
               <ProfileBadges />

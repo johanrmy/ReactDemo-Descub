@@ -42,8 +42,8 @@ const Map = (props) => {
                       key={item.id}
                       onClick={() =>
                         handleZoomToLocation([
-                          item.mural.latidud,
-                          item.mural.altidud,
+                          item.mural.latitud,
+                          item.mural.altitud,
                         ])
                       }
                       className="infoMap p-3"
@@ -71,7 +71,7 @@ const Map = (props) => {
         {props.muralScan.map((item) => (
           <Marker
             key={item.id}
-            position={[item.mural.latidud, item.mural.altidud]}
+            position={[item.mural.latitud, item.mural.altitud]}
           >
             <Popup>{item.mural.direccion}</Popup>
           </Marker>

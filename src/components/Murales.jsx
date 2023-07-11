@@ -1,5 +1,6 @@
 import { Container,Row,Col } from "react-bootstrap"
 import MuralCard from "./MuralCard";
+import CeroMurales from "./CeroMurales";
 function MuralesPicture(){
     return (
         <section className="estadisticas_picture">
@@ -23,7 +24,7 @@ function MuralesListSection(props){
         <Row>
           {props.mur.map((item) => (
             <Col lg={4} md={4} sm={6} xs={12} key={item.id} className="mt-2">
-              <MuralCard titulo = {item.mural.nombre} img = {item.mural.imagen} id = {item.mural.id}/>
+              <MuralCard titulo = {item.mural.nombre} img = {item.mural.imagen1} id = {item.mural.id}/>
             </Col>
           ))}
         </Row>
@@ -35,8 +36,14 @@ function MuralesListSection(props){
 function MuralesSection(props){
     return(
         <>
-        <MuralesPicture/>
-        <MuralesListSection mur={props.muralesList}/>
+        {props.muralesList.length == 0 ? (
+          <CeroMurales/>
+        ): 
+        <>
+          <MuralesPicture/>
+          <MuralesListSection mur={props.muralesList}/>
+        </>
+        }
         </>
     )
 }

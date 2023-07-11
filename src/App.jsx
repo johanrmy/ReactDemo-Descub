@@ -4,11 +4,12 @@ import Murales from './routes/Murales.jsx';
 import Mapeo from './routes/Mapeo.jsx';
 import Estadisticas from './routes/Estadisticas.jsx';
 import Muralista from './routes/Muralista.jsx';
+import Mural from './routes/Mural.jsx';
+import NotFound from './routes/404.jsx';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import Login from './routes/Login.jsx';
 import Register from './routes/Register.jsx';
 import { ProtectedRoute } from './components/ProtectedRoute.jsx';
-import DescubNavbar from './components/Navbar.jsx';
 
 const user = {id:1,nombre:"johan"}
 const router = createBrowserRouter([
@@ -17,12 +18,16 @@ const router = createBrowserRouter([
     element: <Home isAllowed={!!user}/>,
   },
   {
-    path: "/tusmurales/:id_usuario",
+    path: "/tusmurales/",
     element: <ProtectedRoute isAllowed={!!user}><Murales/></ProtectedRoute>,
   },
   {
-    path: "/mapear/:id_usuario",
+    path: "/mapear/",
     element: <ProtectedRoute isAllowed={!!user}><Mapeo /></ProtectedRoute>,
+  },
+  {
+    path: "/mural/:id",
+    element: <ProtectedRoute isAllowed={!!user}><Mural /></ProtectedRoute>,
   },
   {
     path: "/estadisticas",
@@ -41,8 +46,8 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/auth",
-    element: <Auth />,
+    path:"*", 
+    element: <NotFound />,
   },
 ]);
 

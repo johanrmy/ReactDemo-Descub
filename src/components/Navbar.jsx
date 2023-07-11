@@ -7,8 +7,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import {Link} from "react-router-dom";
 import logo from '../assets/descub_logo_red.svg'
 import { Button } from 'react-bootstrap';
-
+import { useAuth0 } from "@auth0/auth0-react";
+import { LoginButton } from "../components/LoginButton";
+import { LogoutButton } from "../components/LogoutButton";
+import { Profile } from "../components/ProfileAuth";
 function DescubNavbar(props) {
+  const { isAuthenticated } = useAuth0();
+  const { logout } = useAuth0();
   DescubNavbar.defaultProps = {
     isA : true
   }
@@ -34,13 +39,13 @@ function DescubNavbar(props) {
                 <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav>
                     <Link
-                      to={"/tusmurales/1"}
+                      to={"/tusmurales"}
                       className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center"
                     >
                       Tus Murales
                     </Link>
                     <Link
-                      to={"/mapear/1"}
+                      to={"/mapear"}
                       className="DescubLinks mx-4 d-flex align-items-center text-center justify-content-center"
                     >
                       Mapear
@@ -52,28 +57,28 @@ function DescubNavbar(props) {
                       Estadisticas
                     </Link>
                   </Nav>
-                  {!props.isA ? (
-                    <Link to={"/login"} className="DescubLinks mx-5 d-flex align-items-center text-center justify-content-end">
-                      <Button variant="danger" type="submit" className='descub-submit-form'>
-                        Inicia Sesión
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Nav className="mx-auto">
+                  {isAuthenticated ? (
+                    <>
+                      <Nav className="mx-auto">
                       <NavDropdown
                         title="Mi Usuario"
                         id="collasible-nav-dropdown"
                         className="DescubLinks"
                       >
-                        <NavDropdown.Item href="#action/3.1">
-                          Usuario
+                        <NavDropdown.Item>
+                          <Profile />
                         </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.3">
+                        <NavDropdown.Item onClick={() => logout({ returnTo: window.location.origin })}>
                           Cerrar Sesión
                         </NavDropdown.Item>
                       </NavDropdown>
                     </Nav>
+                    </>
+                  ) : (
+                    <div className='mx-auto DescubLinks d-flex align-items-center text-center justify-content-center'>
+                      <LoginButton />
+                    </div>
                   )}
                 </Navbar.Collapse>
               </Col>

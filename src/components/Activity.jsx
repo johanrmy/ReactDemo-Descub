@@ -12,42 +12,24 @@ function ActivityTitle() {
   );
 }
 
-function ActivityGroup() {
+function ActivityGroup(props) {
   return (
     <>
-      <Col lg={4} md={4} sm={6} xs={12} >
-        <Card className='mx-auto my-2'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Button variant="secondary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col lg={4} md={4} sm={6} xs={12} >
-        <Card className='mx-auto my-2'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Button variant="secondary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col lg={4} md={4} sm={6} xs={12} >
-        <Card className='mx-auto my-2'>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Button variant="secondary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Col>
-      
+      {props.murales.map((mural)=>(
+      <Col lg={4} md={4} sm={6} xs={12} key={mural.id} >
+      <Card className='mx-auto my-2'>
+        <Card.Img variant="top" src={mural.imagen1} height={400}/>
+        <Card.Body>
+          <Card.Title>{mural.nombre}</Card.Title>
+        </Card.Body>
+      </Card>
+    </Col>  
+      ))}  
     </>
   );
 }
 
-function ActivitySection() {
+function ActivitySection(props) {
   return (
     <section className="DescubActivity">
       <Container>
@@ -55,7 +37,7 @@ function ActivitySection() {
           <ActivityTitle />
         </Row>
         <Row>
-          <ActivityGroup />
+          <ActivityGroup murales={props.infoMural}/>
         </Row>
       </Container>
     </section>

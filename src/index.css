@@ -208,11 +208,14 @@ h2,.ProfileStatistics,.activity-card-tittle{
   font-size: 2.5em;
   font-family: 'Rubik';
 }
-.PaintImgLogin,.PaintImgRegister{
+.PaintImgLogin,.PaintImgRegister,.PaintImgCero{
   width: 80%;
   height: 100%;
   filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
   animation: moveImage 2.5s infinite alternate;
+}
+.cero_picture{
+  background: #FFFFFF;
 }
 @keyframes moveImage {
   0% {
@@ -303,4 +306,36 @@ h2,.ProfileStatistics,.activity-card-tittle{
   font-size: 1.7em;
   color: #1C7C54;
   font-weight: 800;
+}
+.color-div{
+  position: relative;
+  border-radius: 20px;
+}
+.color-div:hover::after {
+  content: attr(data-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-weight: bold;
+  font-size: 18px;
+}
+.title-div-mural{
+  font-family: 'Rubik','Open Sans';
+  font-weight: 600;
+}
+.text-div-mural,.mural-li{
+  font-family: 'Open Sans';
+  font-size: 1em;
+}
+.mural-li-ubi,.mural-li-muralista,.mural-li-fecha{
+  text-decoration: none;
+  font-weight: 700;
+}
+.mural-li-muralista{
+  color: #FEA82F;
+}
+.mural-li-muralista:hover{
+  color: #FEC371;
 }

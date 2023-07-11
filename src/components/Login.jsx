@@ -2,7 +2,6 @@ import { Container,Row,Col,Form,Button} from "react-bootstrap";
 import logo from '../assets/descub_logo_red.svg'
 import React, { useEffect , useState} from 'react'
 import tsetse from '../assets/tsetese.svg'
-import heartPaint from '../assets/heart-paint.svg'
 import { Link } from "react-router-dom";
 
 function DescubLogin(){

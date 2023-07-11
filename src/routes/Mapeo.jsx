@@ -1,23 +1,36 @@
 import DescubNavbar from "../components/Navbar"
 import Map from "../components/Mapping"
+import CargarMapa from "../components/CargarMapa";
 import React,{useEffect,useState} from "react";
-import { useParams } from "react-router-dom";
 import { MapearApi } from "../data/Mapear";
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function Mapeo(){
-  const[mural,setMural] = useState(null)
-  const params = useParams()
-  useEffect(()=>{
-    MapearApi(params.id_usuario,setMural)
-  },[])
+  const [murales, setMurales] = useState(null);
+  const { user, isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
+
+  useEffect(() => {
+    if (isAuthenticated && user && user.email) {
+      MapearApi(user.email, setMurales);
+    }
+  }, [isAuthenticated, user]);
+
+  useEffect(() => {
+    if (!isLoading && !isAuthenticated) {
+      loginWithRedirect()
+    }
+  }, [isLoading, isAuthenticated, loginWithRedirect]);
     return (
       <>
-        <DescubNavbar />
-        {mural != null ? (
-        <Map muralScan={mural.data} />
-        ): (
-          "CARGANDO"
-        )}
+        <DescubNavbar/>
+        {isLoading ? (
+          <CargarMapa />
+      ) : isAuthenticated && murales !== null ? (
+        <Map muralScan={murales.data} />
+      ) : (
+        <CargarMapa/>
+      )}
       </>
     );
 }
