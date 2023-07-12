@@ -1,3 +1,2 @@
 Proyecto Descub
-![Descub](https://i.ibb.co/zHkBG3H/descub-menu.png)
-
+![Descub](https://i.ibb.co/CwkG2cf/descub-menu.jpg)
